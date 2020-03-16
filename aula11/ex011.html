@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verificar Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    <p>Qual seu país de nascimento?</p>
+    <input type="text" name="txtnasc" id="txtnasc">
+    <input type="button" value="Validar" onclick="validate()">
+    <div id="res"></div>
+    
+    <script>
+        function validate(){
+            var nasc = window.document.getElementById('txtnasc').value
+            var res = window.document.getElementById('res')
+            if (nasc == 'Brasil'){
+                res.innerHTML = `<p>Nascendo no ${nasc} você é Brasileiro!</p>`
+            } else {
+                res.innerHTML = `<p>Nascendo no(a) ${nasc} você é estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
